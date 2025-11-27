@@ -1,0 +1,14 @@
+timestamp,endpoint,raw_body,classification,notes
+2025-11-27T11:08:43.670661,/api/login,username=admin' OR '1'='1&password=test,bad,detected by ML
+2025-11-27T11:08:43.898501,/api/login,username=admin'; DROP TABLE users;--&password=pw,bad,detected by ML
+2025-11-27T11:08:43.976408,/api/login,username=a' AND SLEEP(5)--&password=1,bad,detected by ML
+2025-11-27T11:09:03.611155,/api/login,"{""username"":""admin"",""password"":""admin123"",""timestamp"":""2025-11-27T05:39:03.588Z""}",bad,detected by ML
+2025-11-27T11:09:51.840537,/api/login,"{""username"":""admin"",""password"":""1234567"",""timestamp"":""2025-11-27T05:39:51.806Z""}",bad,detected by ML
+2025-11-27T11:10:27.128064,/api/login,"{""username"":""alice"",""password"":""secret"",""timestamp"":""2025-11-27T05:40:27.120Z""}",bad,detected by ML
+2025-11-27T12:43:53.719206,/api/login,username=admin' OR '1'='1&password=test,bad,detected by ML
+2025-11-27T12:43:53.848944,/api/login,username=admin'; DROP TABLE users;--&password=pw,bad,detected by ML
+2025-11-27T12:43:53.917144,/api/login,username=alice&password=secret,bad,detected by ML
+2025-11-27T12:43:53.932636,/api/login,username=<script>alert(1)</script>&password=pass,bad,detected by ML
+2025-11-27T12:44:38.434620,/api/login,username=chetan&password=chetan12345,bad,detected by ML
+2025-11-27T14:18:41.619677,/api/login,username=rach&password=rach12345,bad,detected by ML
+2025-11-27T14:25:02.621467,/api/login,username=rachana&password=rachana12345,bad,detected by ML

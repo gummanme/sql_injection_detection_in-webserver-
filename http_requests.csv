@@ -1,0 +1,37 @@
+timestamp,method,url,body
+2025-11-26T19:05:53.770Z,POST,,
+2025-11-27T00:59:52.422070,POST,/api/login,username=admin
+2025-11-27T01:03:26.906570,POST,/api/login,username=admin&password=admin123
+2025-11-27T01:09:07.295806,POST,/api/login,username=%27+OR+%27%27%3D%27%27&password=a
+2025-11-27T01:14:50.531580,POST,/api/login,username=user' OR '1'='1&password=qwert
+2025-11-27T01:15:51.481180,POST,/api/login,username=admin&password=%3Bcat+/etc/passwd
+2025-11-27T01:34:29.995038,POST,/api/login,"{""username"":""admin"",""password"":""2345678"",""timestamp"":""2025-11-26T20:04:29.976Z""}"
+2025-11-27T01:35:33.887959,POST,/api/login,"{""username"":""evil%40gmail.com"",""password"":""aaaaaa"",""timestamp"":""2025-11-26T20:05:33.875Z""}"
+2025-11-27T01:35:54.323454,POST,/api/login,"{""username"":""admin"",""password"":""admin123"",""timestamp"":""2025-11-26T20:05:54.277Z""}"
+2025-11-27T01:36:00.920986,POST,/api/login,"{""username"":""admin"",""password"":""admin123"",""timestamp"":""2025-11-26T20:06:00.910Z""}"
+2025-11-27T01:36:07.703795,POST,/api/login,"{""username"":""admin"",""password"":""admin123"",""timestamp"":""2025-11-26T20:06:07.696Z""}"
+2025-11-27T01:36:17.739160,POST,/api/login,"{""username"":""admin"",""password"":""admin123"",""timestamp"":""2025-11-26T20:06:17.735Z""}"
+2025-11-27T11:08:43.670661,POST,/api/login,username=admin' OR '1'='1&password=test
+2025-11-27T11:08:43.898501,POST,/api/login,username=admin'; DROP TABLE users;--&password=pw
+2025-11-27T11:08:43.976408,POST,/api/login,username=a' AND SLEEP(5)--&password=1
+2025-11-27T11:08:44.045614,POST,/api/login,username=<script>alert(1)</script>&password=pass
+2025-11-27T11:08:44.152882,POST,/api/login,username=alice&password=secret
+2025-11-27T11:09:03.611155,POST,/api/login,"{""username"":""admin"",""password"":""admin123"",""timestamp"":""2025-11-27T05:39:03.588Z""}"
+2025-11-27T11:09:51.840537,POST,/api/login,"{""username"":""admin"",""password"":""1234567"",""timestamp"":""2025-11-27T05:39:51.806Z""}"
+2025-11-27T11:10:27.128064,POST,/api/login,"{""username"":""alice"",""password"":""secret"",""timestamp"":""2025-11-27T05:40:27.120Z""}"
+2025-11-27T12:27:31.278047,POST,/api/login,username=lamma&password=lamma12345
+2025-11-27T12:27:36.629570,POST,/api/login,username=lamma&password=lamma12345
+2025-11-27T12:27:50.734329,POST,/api/login,username=admin &password=admin123
+2025-11-27T12:29:27.996698,POST,/api/login,username=admin &password=admin12345
+2025-11-27T12:31:51.910392,POST,/api/login,username=alice &password=secret
+2025-11-27T12:32:26.798345,POST,/api/login,username=alicee&password=secrett
+2025-11-27T12:43:53.719206,POST,/api/login,username=admin' OR '1'='1&password=test
+2025-11-27T12:43:53.848944,POST,/api/login,username=admin'; DROP TABLE users;--&password=pw
+2025-11-27T12:43:53.866431,POST,/api/login,username=admin&password=admin123
+2025-11-27T12:43:53.917144,POST,/api/login,username=alice&password=secret
+2025-11-27T12:43:53.932636,POST,/api/login,username=<script>alert(1)</script>&password=pass
+2025-11-27T12:44:38.434620,POST,/api/login,username=chetan&password=chetan12345
+2025-11-27T12:45:38.172552,POST,/api/login,username=admin&password=admin123
+2025-11-27T14:17:36.371453,POST,/api/login,username=admin&password=admin123
+2025-11-27T14:18:41.619677,POST,/api/login,username=rach&password=rach12345
+2025-11-27T14:25:02.621467,POST,/api/login,username=rachana&password=rachana12345

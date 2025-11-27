@@ -1,0 +1,185 @@
+# TechCorp Admin Portal - Quick Start
+
+## 🚀 Launch Your Admin System
+
+### Start Flask Server
+```bash
+cd d:\csvmy
+.\venv\Scripts\python app.py
+```
+
+### Access the Portal
+Open browser and go to: **http://localhost:5000**
+
+---
+
+## 📋 Admin Login Credentials
+
+### Primary Admin Account
+| Field | Value |
+|-------|-------|
+| **Username** | `admin` |
+| **Password** | `admin123` |
+
+### Backup Admin Account
+| Field | Value |
+|-------|-------|
+| **Username** | `root` |
+| **Password** | `root123` |
+
+---
+
+## 🏢 Dashboard Features After Login
+
+### 📊 Dashboard Tab
+- Total HTTP requests processed
+- Count of legitimate requests ✅
+- Count of suspicious requests ⚠️
+- Model accuracy (100%)
+- Recent 10 requests table
+
+### 🔍 Analyze Request Tab
+- **Method**: Select HTTP method (GET, POST, PUT, DELETE, PATCH, HEAD)
+- **URL**: Enter endpoint (e.g., `/api/login`, `/users/profile`)
+- **Body**: Paste request body
+- Click **Submit Request**
+- View analysis result with classification
+
+### 📜 Request History Tab
+- All submitted HTTP requests
+- Method, URL, body, timestamp
+- Sortable and viewable
+
+### ⚙️ Settings Tab
+- View username (admin)
+- View role (Administrator)
+- View login time
+- Change password button (coming soon)
+
+---
+
+## 📝 Example Usage
+
+### Example 1: Submit Legitimate Request
+1. Go to **Analyze Request** tab
+2. **Method**: POST
+3. **URL**: /api/users
+4. **Body**: `{"name": "John", "email": "john@example.com"}`
+5. Click **Submit Request**
+6. Result: ✅ LEGITIMATE REQUEST
+
+### Example 2: Submit Suspicious Request
+1. Go to **Analyze Request** tab
+2. **Method**: GET
+3. **URL**: /files
+4. **Body**: `../../../etc/passwd`
+5. Click **Submit Request**
+6. Result: ⚠️ MALICIOUS REQUEST
+
+### Example 3: View Statistics
+1. Click **Dashboard** tab
+2. View all real-time statistics
+3. Check recent requests table
+
+---
+
+## 🔒 Security Features
+
+✅ Session-based authentication
+✅ Admin-only access control
+✅ Failed login attempt logging
+✅ Automatic logout after 24 hours
+✅ Secure session management
+✅ Role-based authorization
+
+---
+
+## 🛑 To Logout
+
+Click **Logout** button in top-right corner → Redirects to login page
+
+---
+
+## ⚡ Key Routes
+
+| Route | Purpose | Access |
+|-------|---------|--------|
+| `/` | Login page | Public |
+| `/dashboard` | Admin dashboard | Admin only |
+| `/api/login` | Authentication endpoint | Public |
+| `/api/logout` | Logout endpoint | Admin only |
+| `/api/dashboard-data` | Get statistics (JSON) | Admin only |
+| `/api/http-request` | Submit request | Admin only |
+
+---
+
+## 📊 Complete Access After Admin Login
+
+After admin login, you get access to:
+
+✅ Real-time dashboard statistics
+✅ HTTP request submission & analysis
+✅ Request history & logging
+✅ ML model classification results
+✅ Feature analysis breakdown
+✅ Account settings
+✅ Full company data access
+
+---
+
+## 🎯 System Architecture
+
+```
+User → Login Form (login.html)
+   ↓
+   ├─ Valid Credentials → Session Created → Dashboard (dashboard.html)
+   │
+   ├─ Invalid Credentials → Error Message → Login Form
+   │
+   └─ Logged Out → Session Cleared → Login Form
+
+Dashboard has access to:
+- Statistics API (/api/dashboard-data)
+- Request Submission (/api/http-request)
+- Logout Route (/api/logout)
+```
+
+---
+
+## 🐛 Troubleshooting
+
+### "Incorrect username or password"
+- Check credentials match: `admin` / `admin123`
+- Try backup account: `root` / `root123`
+
+### "Unauthorized" error
+- You're not logged in or session expired
+- Go to / and login again
+
+### Dashboard not loading data
+- Check if login_dataset.csv exists
+- Ensure http_requests.csv has write permissions
+
+### Flask not starting
+- Check port 5000 is not in use
+- Run: `netstat -ano | findstr :5000`
+- Kill process if needed and restart
+
+---
+
+## 📦 System Files
+
+| File | Purpose |
+|------|---------|
+| `app.py` | Flask backend with auth routes |
+| `login.html` | Admin login form |
+| `dashboard.html` | Admin dashboard UI |
+| `http_requests.csv` | Request log |
+| `login_dataset.csv` | ML training data |
+
+---
+
+**Status**: ✅ **LIVE & READY**
+**Server**: Running at http://localhost:5000
+**Admin Access**: Enabled
+**Dashboard**: Fully Functional
